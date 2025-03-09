@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class WebPage</title>
+    
+    <!-- CSS File -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='hi.css') }}">
+    <!-- PDF.js for PDF previews -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <center>
+            <h1>Geethanjali College Of Engineering And Technology</h1>
+            <h4>Cheeryal (Village) | Keesara (Mandal) | Medchal (District) | Telangana (State)</h4>
+            <h2>Cyber Security</h2>
+        </center>
+    </header>
+
+    <!-- Subjects Navigation Bar -->
+    <div class="nav-bar">
+        <center>
+            <a href="#" class="subject-link" data-subject="Distributed Systems">Distributed Systems</a>
+            <a href="#" class="subject-link" data-subject="Machine Learning">Machine Learning</a>
+            <a href="#" class="subject-link" data-subject="Information Security">Information Security</a>
+            <a href="#" class="subject-link" data-subject="Software Engineering">Software Engineering</a>
+            <a href="#" class="subject-link" data-subject="Digital Forensics">Digital Forensics</a>
+        </center>
+    </div>
+
+    <!-- Subject Display Section -->
+    <section>
+        <h2 id="subject-title">Select a Subject</h2>
+
+        <!-- File Display Section -->
+        <h3>Uploaded Files</h3>
+        <div id="uploaded-files"></div>
+
+        <!-- Upload Form -->
+        <div id="upload-section">
+            <h3>Upload a File</h3>
+            <form id="upload-form" enctype="multipart/form-data">
+                <label for="file-input" id="drop-area">
+                    <p>📂 Drag & Drop Files Here or Click to Choose</p>
+                    <input type="file" name="file" id="file-input" hidden>
+                </label>
+                <p id="file-name">No file chosen</p>
+                <button type="submit" id="upload-btn">Upload</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Hidden Subject Storage -->
+    <p class="selected-subject" style="display:none;">DS</p>
+
+    <!-- JavaScript File -->
+    <script src="{{ url_for('static', filename='kk.js') }}"></script>
+</body>
+</html>
